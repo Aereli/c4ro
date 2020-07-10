@@ -8,8 +8,10 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="c4ro" />
-    <Image />
-    <Link to="/page-2/">Go to page 2</Link>
+    <div style={{ height: `40vh`, width: `100vw` }}>
+      <Image />
+    </div>
+    {/* <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
 )
 
