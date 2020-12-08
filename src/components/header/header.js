@@ -1,9 +1,9 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
-import "./header.css"
+import "./_header.scss"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   return (
@@ -36,7 +36,13 @@ const Header = ({ siteTitle }) => {
           <Link to="#">Contact + learn</Link>
         </li>
       </ul>
-      <div className={isOpen ? "burger open" : "burger"} onClick={toggle}>
+      <div
+        className={isOpen ? "burger open" : "burger"}
+        onClick={toggle}
+        onKeyDown={toggle}
+        role="button"
+        tabIndex={0}
+      >
         <div className="line1"></div>
         <div className="line2"></div>
         <div className="line3"></div>

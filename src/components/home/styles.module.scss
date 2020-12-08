@@ -1,0 +1,14 @@
+.container {
+  background-color: var(--primary);
+  padding: 2rem 0;
+}
+
+.image {
+  position: relative;
+  display: flex;
+  height: 500px;
+
+  & > * {
+    flex-grow: 1;
+  }
+}

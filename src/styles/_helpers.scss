@@ -1,0 +1,113 @@
+// Link - pseudo classes
+// If $visited, $hover or $active is not defined, it will fall back
+// to the $link default value. This way not all colors have to be specified.
+// Userful for when the a link should be the same color for all pseudo classes
+@mixin link($link, $visited: $link, $hover: $link, $active: $link) {
+  & {
+    color: $link;
+    text-decoration: none;
+
+    &:visited {
+      color: $visited;
+    }
+
+    &:hover {
+      color: $hover;
+    }
+
+    &:active,
+    &:focus {
+      color: $active;
+    }
+  }
+}
+
+// Border Radius
+@mixin BorderRadius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box; // stops bg color from leaking outside the border
+}
+
+// Aspect Ratio Container Height
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+@mixin button-primary(
+  $color: $white,
+  $background: $secondary-color,
+  $hover: $primary-color
+) {
+  @include link($color);
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 2.5em;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  background: $background;
+  padding: 0 14px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    background: $hover;
+  }
+}
+
+@mixin vertical-centering() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-centering() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin absolute-centering() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin table-cell() {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// Transparent Colors
+@mixin opacity-white($val) {
+  background: rgba(255, 255, 255, $val);
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Aspect Ratio
+@mixin aspect-ratio($ratio: 1 1) {
+  $width: 100%;
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+  width: $width;
+  height: 0;
+  padding-bottom: $height;
+}
