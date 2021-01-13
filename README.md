@@ -3,6 +3,10 @@
 - babel-plugin-react-css-modules
   https://www.npmjs.com/package/react-css-modules
 
+## notes
+
+- Changes were made via NBC git account.
+
 ## 🧐 What's inside?
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
