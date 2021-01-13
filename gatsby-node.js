@@ -9,21 +9,22 @@ import path from "path"
 // Splinters
 async function splinterPages({ graphql, actions }) {
   const { data } = await graphql(`
-    query {
-      allDataJson {
-        splinter {
-          seminar {
-            slug
-          }
+    {
+      allProjectsJson {
+        nodes {
+          slug
         }
       }
     }
   `)
-  console.log(data.allDataJson.splinter)
-  data.allDataJson.splinter.seminar.forEach(seminar => {
+  // console.log("nodesss:", data.allHomepageJson.edges[0].node)
+  data.allProjectsJson.nodes.forEach(project => {
     actions.createPage({
-      path: `/seminars/${seminar.slug}`,
-      component: path.resolve("./src/templates/seminar-template.js"),
+      path: `/project/${project.slug}`,
+      component: path.resolve("./src/templates/projects-template.js"),
+      context: {
+        slug: project.slug,
+      },
     })
   })
 }

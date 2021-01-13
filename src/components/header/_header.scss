@@ -11,6 +11,7 @@ nav {
 
 .logo {
   font-size: 20px;
+  z-index: 5;
   li a {
     text-transform: uppercase;
   }
@@ -21,6 +22,7 @@ nav {
   width: 100vw;
   justify-content: space-evenly;
   background-color: white;
+  z-index: 2;
 
   li a {
     text-transform: uppercase;
@@ -28,7 +30,9 @@ nav {
 }
 
 .burger {
+  z-index: 2;
   display: none;
+  outline: none;
   cursor: pointer;
   div {
     background-color: #000;
@@ -50,7 +54,6 @@ nav {
     align-items: center;
     transform: translateY(-110%);
     transition: ease-in-out 0.5s;
-    z-index: 2;
   }
   .burger {
     display: block;

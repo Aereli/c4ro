@@ -1,6 +1,9 @@
 .container {
-  background-color: var(--primary);
+  position: absolute;
+  left: 0;
+  right: 0;
   padding: 2rem 0;
+  background-color: var(--primary);
 }
 
 .image {
@@ -11,4 +14,9 @@
   & > * {
     flex-grow: 1;
   }
+}
+
+.inner {
+  max-width: var(--maxWidth);
+  margin: auto;
 }

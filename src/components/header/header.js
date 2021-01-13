@@ -6,6 +6,7 @@ import "./_header.scss"
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
+
   return (
     <nav>
       <div className="logo">
@@ -15,7 +16,7 @@ const Header = () => {
       </div>
       <ul className={isOpen ? "nav-links nav-active" : "nav-links"}>
         <li>
-          <Link to="#">Architecture</Link>
+          <a href="#splinterSection">Architecture</a>
         </li>
         <li>
           <Link to="#">Interior Design</Link>
