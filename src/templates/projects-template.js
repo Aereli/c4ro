@@ -2,18 +2,25 @@ import React from "react"
 import Layout from "../components/Layout"
 import styles from "./styles.module.scss"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import SEO from "../components/seo"
 
 const ProjectsTemplate = ({ data }) => {
   const splinter = data.projectsJson
+
+  console.log('data:',data)
+  // console.log('imagessdf:', data.images.edges.map(item => item.node.childImageSharp))
 
   return (
     <Layout>
       <SEO title={"Splinter"} />
       <div>
         <h1 className={styles.title}>{splinter.title}</h1>
-        test
         <h2>{splinter.description}</h2>
+        {data.images.edges.map(item => ( 
+          <Img key={item.node.id}fluid={item.node.childImageSharp.fluid} alt={item.node.name} />
+          ))
+        }
       </div>
     </Layout>
   )
@@ -27,10 +34,26 @@ export const query = graphql`
       slug
       title
       description
-      images {
-        id
-        url
+    }
+  
+  images :
+    allFile(
+      filter: { relativeDirectory: {eq: $slug } }
+    ) {
+      edges {
+        node {
+          id
+          name
+          relativeDirectory
+          childImageSharp {
+            fluid (maxWidth: 3080, quality: 100){
+              ...GatsbyImageSharpFluid
+              # ...GatsbyImageSharpFluidLimitPresentationSize
+            }
+          }
+        }
       }
     }
   }
+  
 `

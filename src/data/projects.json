@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "title": "miami beach school of arch",
-    "description": "This is a descrition",
-    "slug": "miami-beach",
+    "title": "Cohen Miami",
+    "description": "This was a custom design for a living room and outdoor patio renovation. Ideas came from the clients suggestions of decor.",
+    "slug": "cohen",
     "images": [
       {
         "id": 1,
@@ -17,9 +17,9 @@
   },
   {
     "id": 2,
-    "title": "lincoln road",
-    "description": "This is a descrition",
-    "slug": "lincoln-road",
+    "title": "De Ona",
+    "description": "Kitchen, Living, Closet, oh my!",
+    "slug": "de_ona",
     "images": [
       {
         "id": 1,

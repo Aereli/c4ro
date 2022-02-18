@@ -5,8 +5,7 @@ import styles from "./styles.module.scss"
 const HomeSection = ({ data }) => {
   return (
     <div className={styles.container} id="splinterSection">
-      <div className={styles.inner}>
-        <h1>Splinter</h1>
+      <div className={styles.inner} >
         {data.map(item => (
           <h2 key={item.id}>
             <Link to={`/project/${item.slug}`}>{item.title}</Link>
