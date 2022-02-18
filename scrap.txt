@@ -1,0 +1,1 @@
+    // "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop",
