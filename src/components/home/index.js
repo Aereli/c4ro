@@ -9,7 +9,7 @@ const HomeSection = ({ data }) => {
         <h1>Splinter</h1>
         {data.map(item => (
           <h2 key={item.id}>
-            <Link to={`/seminars/${item.slug}`}>{item.title}</Link>
+            <Link to={`/project/${item.slug}`}>{item.title}</Link>
           </h2>
         ))}
       </div>

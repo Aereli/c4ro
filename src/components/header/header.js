@@ -31,10 +31,10 @@ const Header = () => {
           <Link to="#">publications</Link>
         </li>
         <li>
-          <Link to="#">resume + cv</Link>
+          <Link to="#">resume</Link>
         </li>
         <li>
-          <Link to="#">Contact + learn</Link>
+          <Link to="#">Contact</Link>
         </li>
       </ul>
       <div
