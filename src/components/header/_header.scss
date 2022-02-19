@@ -1,16 +1,16 @@
-@import "../../styles/primary-styles.scss";
+@import url('../../styles/primary-styles.scss');
 
 nav {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-family: "Quicksand", sans-serif;
+  font-family: cigra;
   margin: 1rem;
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 1.5rem;
   z-index: 5;
   li a {
     text-transform: uppercase;
@@ -18,11 +18,13 @@ nav {
 }
 
 .nav-links {
+  font-family: "Quicksand", sans-serif;
   display: flex;
   width: 100vw;
   justify-content: space-evenly;
   background-color: white;
   z-index: 2;
+
 
   li a {
     text-transform: uppercase;

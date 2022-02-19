@@ -16,7 +16,7 @@ const ProjectsTemplate = ({ data }) => {
       <SEO title={"Splinter"} />
       <div>
         <h1 className={styles.title}>{splinter.title}</h1>
-        <h2>{splinter.description}</h2>
+        <h3>{splinter.description}</h3>
         {data.images.edges.map(item => ( 
           <Img key={item.node.id}fluid={item.node.childImageSharp.fluid} alt={item.node.name} />
           ))
