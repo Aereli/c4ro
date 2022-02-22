@@ -4,12 +4,12 @@ import styles from "./styles.module.scss"
 
 const HomeSection = ({ data }) => {
   return (
-    <div className={styles.container} id="splinterSection">
+    <div className={styles.container} id="projects">
       <div className={styles.inner} >
         {data.map(item => (
-          <h2 key={item.id}>
+          <h1 key={item.id}>
             <Link to={`/project/${item.slug}`}>{item.title}</Link>
-          </h2>
+          </h1>
         ))}
       </div>
     </div>

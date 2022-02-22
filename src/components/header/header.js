@@ -19,7 +19,7 @@ const Header = () => {
           {/* <a href="#splinterSection">Architecture</a> */}
         </li>
         <li>
-          <Link to="#">Interior Design</Link>
+          <Link to="/interior">Interior Design</Link>
         </li>
         {/* <li>
           <Link to="#">Graphic Illustrations</Link>

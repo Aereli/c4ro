@@ -14,7 +14,7 @@ const ProjectsTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={"Splinter"} />
-      <div>
+      <div className={styles.container}>
         <h1 className={styles.title}>{splinter.title}</h1>
         <h3>{splinter.description}</h3>
         {data.images.edges.map(item => ( 

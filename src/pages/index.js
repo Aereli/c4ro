@@ -1,30 +1,30 @@
 import React from "react"
 
 import Layout from "../components/Layout"
-import HomeLogo from "../components/Home/image"
+// import HomeLogo from "../components/Home/image"
 import HomeSymbol from "../components/Home/symbol"
-import HomeSection from "../components/Home"
+// import HomeSection from "../components/Home"
 import SEO from "../components/seo"
-import { graphql, useStaticQuery } from "gatsby"
+// import { graphql, useStaticQuery } from "gatsby"
 import Footer from "../components/Footer/Footer"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allProjectsJson {
-        nodes {
-          slug
-          title
-          id
-          description
-          images {
-            id
-            url
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allProjectsJson {
+  //       nodes {
+  //         slug
+  //         title
+  //         id
+  //         description
+  //         images {
+  //           id
+  //           url
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <Layout>
