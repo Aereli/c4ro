@@ -1,14 +1,22 @@
-
-@font-face {
-  font-family: cigra;
-  src: url("../fonts/Cigra.ttf") format('truetype') ;
-}
-
 :root {
   --primary: #fce9eb;
   --black: #000;
 
   --maxWidth: 1200px;
+}
+
+//EXTEND NOT WORKING!
+%full-width-override {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+}
+
+%center-layout {
+  max-width: var(--maxWidth);
+  margin: 2rem auto 0 auto;
+  padding: 5px;
 }
 
 html {
@@ -17,6 +25,7 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

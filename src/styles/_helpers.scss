@@ -2,6 +2,8 @@
 // If $visited, $hover or $active is not defined, it will fall back
 // to the $link default value. This way not all colors have to be specified.
 // Userful for when the a link should be the same color for all pseudo classes
+@import './globals.scss';
+
 @mixin link($link, $visited: $link, $hover: $link, $active: $link) {
   & {
     color: $link;
