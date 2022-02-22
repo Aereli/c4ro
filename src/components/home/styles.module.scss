@@ -2,8 +2,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 81vh;
-  padding: 2rem 0;
+  height: 86vh;
+  // padding: 2rem 0;
   background-color: var(--primary);
 }
 
@@ -18,10 +18,14 @@
 }
 
 .inner {
-  display: flex;
-  justify-content: space-around;
   max-width: var(--maxWidth);
   margin: auto;
+  padding: 20px;
+ 
+  h1 {
+    font-size: 6rem;
+    margin: 5rem 0;
+  }
 }
 
 // **********SYMBOL

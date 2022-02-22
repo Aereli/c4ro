@@ -2,9 +2,12 @@
 @import '../../styles/globals.scss';
 
 nav {
-  @extend %center-layout;
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: 5px;
   display: flex;
-  // padding: 1rem;
+  justify-content: space-between;
+  padding: 20px;
   height: 8vh;
   align-items: center;
   font-family: cigra;
