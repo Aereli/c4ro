@@ -1,3 +1,4 @@
+@import url('../../styles/primary-styles.scss');
 @import '../../styles/globals.scss';
 
 .container {
@@ -5,6 +6,5 @@
 }
 
 .content{
-    margin: 0;
     @extend %center-layout;
 }
