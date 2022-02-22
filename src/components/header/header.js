@@ -16,12 +16,12 @@ const Header = () => {
       </div>
       <ul className={isOpen ? "nav-links nav-active" : "nav-links"}>
         <li>
-          <a href="#splinterSection">Architecture</a>
+          {/* <a href="#splinterSection">Architecture</a> */}
         </li>
         <li>
           <Link to="#">Interior Design</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="#">Graphic Illustrations</Link>
         </li>
         <li>
@@ -35,7 +35,7 @@ const Header = () => {
         </li>
         <li>
           <Link to="#">Contact</Link>
-        </li>
+       </li> */}
       </ul>
       <div
         className={isOpen ? "burger open" : "burger"}

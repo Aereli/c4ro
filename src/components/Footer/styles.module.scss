@@ -1,0 +1,10 @@
+@import '../../styles/globals.scss';
+
+.container {
+    background-color: var(--primary);
+}
+
+.content{
+    margin: 0;
+    @extend %center-layout;
+}

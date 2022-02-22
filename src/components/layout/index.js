@@ -26,10 +26,10 @@ const Layout = ({ children }) => {
   return (
     <div className={styles.container} >
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
+      {/* <div> */}
+        {children}
         {/* <footer>© {new Date().getFullYear()}</footer> */}
-      </div>
+      {/* </div> */}
     </div>
   )
 }
