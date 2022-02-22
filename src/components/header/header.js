@@ -9,45 +9,43 @@ const Header = () => {
 
   return (
     <nav>
-      <div className="logo">
-        <li>
-          <Link to="/">c4ro</Link>
-        </li>
-      </div>
-      <ul className={isOpen ? "nav-links nav-active" : "nav-links"}>
-        <li>
-          {/* <a href="#splinterSection">Architecture</a> */}
-        </li>
-        <li>
-          <Link to="/interior">Interior Design</Link>
-        </li>
-        {/* <li>
+        <div className="logo">
+          <li>
+            <Link to="/">c4ro</Link>
+          </li>
+        </div>
+        <ul className={isOpen ? "nav-links nav-active" : "nav-links"}>
+          <li>{/* <a href="#splinterSection">Architecture</a> */}</li>
+          <li>
+            <Link to="/interior">Interior Design</Link>
+          </li>
+          {/* <li>
           <Link to="#">Graphic Illustrations</Link>
-        </li>
-        <li>
+          </li>
+          <li>
           <Link to="#">Furniture</Link>
-        </li>
-        <li>
+          </li>
+          <li>
           <Link to="#">publications</Link>
-        </li>
-        <li>
+          </li>
+          <li>
           <Link to="#">resume</Link>
-        </li>
-        <li>
+          </li>
+          <li>
           <Link to="#">Contact</Link>
-       </li> */}
-      </ul>
-      <div
-        className={isOpen ? "burger open" : "burger"}
-        onClick={toggle}
-        onKeyDown={toggle}
-        role="button"
-        tabIndex={0}
-      >
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
-      </div>
+        </li> */}
+        </ul>
+        <div
+          className={isOpen ? "burger open" : "burger"}
+          onClick={toggle}
+          onKeyDown={toggle}
+          role="button"
+          tabIndex={0}
+        >
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
+        </div>
     </nav>
   )
 }
