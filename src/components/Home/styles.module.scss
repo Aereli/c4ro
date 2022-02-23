@@ -1,10 +1,13 @@
+
 .container {
   position: absolute;
   left: 0;
   right: 0;
   height: 86vh;
-  // padding: 2rem 0;
-  background-color: var(--primary);
+  // background-color: var(--primary);
+  background-image: url('../../images/subtle-prism\ \(1\).svg');
+  background-position: left top;
+  background-repeat: no-repeat;
 }
 
 .image {
@@ -36,21 +39,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-svg {
   text-align: center;
-  transition: 1s ease;
 }
 
-svg:hover {
-  // transform: translateX(100px);
+.name{
+  visibility: hidden;
+  transform: translatey(255px);
+  font-size: 1.5rem;
 }
 
-// @keyframes animate {
-//   0% { stroke-dashoffset: 0 }
-//   25% { stroke-dashoffset: 1000}
-//   50% { stroke-dashoffset: 0 }
-//   75% { stroke-dashoffset: 100}
-//   100% { stroke-dashoffset: 0 }
-// }
