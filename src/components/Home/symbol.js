@@ -12,29 +12,35 @@ const Symbol = () => {
   const ellipse4Ref = useRef()
 
   useEffect(() => {
-  
-    tween.current = gsap.to([ellipse2Ref.current, ellipse3Ref.current], {
-      x: 180,
-    })
-    tween2.current = gsap.to(ellipse4Ref.current, {
-      x: -180,
-    })
-    tween3.current = gsap.to(nameRef.current, {
-      delay: .5,
-      autoAlpha: 1
-    })
+
+      if(document.documentElement.clientWidth > 767){
+        tween.current = gsap.to([ellipse2Ref.current, ellipse3Ref.current], {
+          x: 180,
+        })
+        tween2.current = gsap.to(ellipse4Ref.current, {
+          x: -180,
+        })
+        tween3.current = gsap.to(nameRef.current, {
+          delay: .5,
+          autoAlpha: 1
+        })
+      }
   }, [])
 
   const onMouseEnterHandler = () => {
-    tween.current.play()
-    tween2.current.play()
-    tween3.current.play()
+    if(tween.current){
+      tween.current.play()
+      tween2.current.play()
+      tween3.current.play()
+    }
   }
   const onMouseLeaveHandler = () => {
-    tween.current.reverse()
-    tween2.current.reverse()
-    tween3.current.reverse()
-  }
+    if(tween.current){
+      tween.current.reverse()
+      tween2.current.reverse()
+      tween3.current.reverse()
+    }
+}
 
   return (
     <>
