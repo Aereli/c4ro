@@ -15,7 +15,6 @@ const Footer = () => {
           </p>
         </div>
         <div className={styles.description}>
-          <h2>Carolina Rivera</h2>
           <h3>"Miami Based Designer"</h3>
           <p>
             Background in architecture with professional experience in interiors
