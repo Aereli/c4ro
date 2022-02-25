@@ -1,11 +1,18 @@
 
+// ******** BACKGROUND
+.container, .svgContainer {
+  background-image: url('../../images/plaster.jpg');
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: cover;
+}
+
+// ******** INDEX
 .container {
   position: absolute;
   left: 0;
   right: 0;
   height: 86vh;
-  // background-color: var(--primary);
-  background-image: url('../../images/subtle-prism\ \(1\).svg');
   background-position: left top;
   background-repeat: no-repeat;
 }
@@ -35,7 +42,7 @@
 
 .svgContainer {
   width: 100%;
-  height: 86vh;
+  height: 91vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,5 +53,6 @@
   visibility: hidden;
   transform: translatey(255px);
   font-size: 1.5rem;
+  letter-spacing: 8px;
 }
 

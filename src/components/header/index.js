@@ -15,7 +15,6 @@ const Header = () => {
           </li>
         </div>
         <ul className={isOpen ? "nav-links nav-active" : "nav-links"}>
-          <li>{/* <a href="#splinterSection">Architecture</a> */}</li>
           <li>
             <Link to="/interior">Interior Design</Link>
           </li>
