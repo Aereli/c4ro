@@ -6,7 +6,7 @@ import HomeSymbol from "../components/Home/symbol"
 // import HomeSection from "../components/Home"
 import SEO from "../components/seo"
 // import { graphql, useStaticQuery } from "gatsby"
-import Footer from "../components/Footer/Footer"
+import Footer from "../components/Footer/index"
 
 const IndexPage = () => {
   // const data = useStaticQuery(graphql`

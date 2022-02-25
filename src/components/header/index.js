@@ -19,21 +19,6 @@ const Header = () => {
           <li>
             <Link to="/interior">Interior Design</Link>
           </li>
-          {/* <li>
-          <Link to="#">Graphic Illustrations</Link>
-          </li>
-          <li>
-          <Link to="#">Furniture</Link>
-          </li>
-          <li>
-          <Link to="#">publications</Link>
-          </li>
-          <li>
-          <Link to="#">resume</Link>
-          </li>
-          <li>
-          <Link to="#">Contact</Link>
-        </li> */}
         </ul>
         <div
           className={isOpen ? "burger open" : "burger"}
