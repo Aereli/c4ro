@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Cohen Miami",
+    "title": "Gio Midtown",
     "description": "This was a custom design for a living room and outdoor patio renovation. Ideas came from the clients suggestions of decor.",
     "slug": "cohen",
     "images": [
@@ -18,8 +18,24 @@
   {
     "id": 2,
     "title": "De Ona",
-    "description": "Kitchen, Living, Closet, oh my!",
+    "description": "Kitchens and Closets, oh my!",
     "slug": "de_ona",
+    "images": [
+      {
+        "id": 1,
+        "url": "https://res.cloudinary.com/aereli/image/upload/v1576695263/C4ro/sample.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://res.cloudinary.com/aereli/image/upload/v1576695270/samples/bike.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Keystone",
+    "description": "Highend luxary contemporary master and bedroom closets",
+    "slug": "keystone",
     "images": [
       {
         "id": 1,

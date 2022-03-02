@@ -16,13 +16,15 @@ const Symbol = () => {
       if(document.documentElement.clientWidth > 767){
         tween.current = gsap.to([ellipse2Ref.current, ellipse3Ref.current], {
           x: 180,
+          duration: .8
         })
         tween2.current = gsap.to(ellipse4Ref.current, {
           x: -180,
+          duration: .8
         })
         tween3.current = gsap.to(nameRef.current, {
-          delay: .5,
-          autoAlpha: 1
+          delay: 1,
+          autoAlpha: 1,
         })
       }
   }, [])
