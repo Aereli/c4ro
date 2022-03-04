@@ -27,12 +27,11 @@
 }
 
 .description {
-  h2 {
-    font-family: "cigra";
-  }
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+
+  margin-left: 25px;
 }
 
 @media screen and (max-width: 768px) {

@@ -7,7 +7,7 @@ const HomeSection = ({ data }) => {
     <div className={styles.container} id="projects">
       <div className={styles.inner} >
         {data.map(item => (
-          <h1 key={item.id}>
+          <h1 className={styles.title} key={item.id}>
             <Link to={`/project/${item.slug}`}>{item.title}</Link>
           </h1>
         ))}
