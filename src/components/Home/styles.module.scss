@@ -61,6 +61,12 @@
   text-align: center;
 }
 
+
+.svg {
+  -webkit-filter: drop-shadow(0 0 0.50rem #000);
+  filter: drop-shadow(0 0 0.50rem #000);
+}
+
 .name{
   visibility: hidden;
   transform: translatey(255px);
@@ -68,8 +74,6 @@
   font-size: 1.5rem;
   letter-spacing: 8px;
 }
-
-
 
 @media screen and (max-width: 768px) {
   .inner {
