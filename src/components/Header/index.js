@@ -10,20 +10,17 @@ const Header = () => {
 
   return (
     <nav>
-        {/* <div className="logo"> */}
         <div className={styles.logo}>
           <li>
-            <Link to="/">c4ro</Link>
+            <Link className={styles.link} to="/">c4ro</Link>
           </li>
         </div>
-        {/* <ul className={isOpen ? "nav-links nav-active" : "nav-links"}> */}
         <ul className={isOpen ? [styles.navLinks, styles.navActive].join(' ') : styles.navLinks}>
           <li>
-            <Link to="/interior">Interior Design</Link>
+            <Link className={styles.link} to="/interior">Interior Design</Link>
           </li>
         </ul>
         <div
-          // className={isOpen ? "burger open" : "burger"}
           className={isOpen ? [styles.burger, styles.open].join(' ') : styles.burger}
           onClick={toggle}
           onKeyDown={toggle}
