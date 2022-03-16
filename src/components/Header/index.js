@@ -15,11 +15,14 @@ const Header = () => {
             <Link className={styles.link} to="/">c4ro</Link>
           </li>
         </div>
-        <ul className={isOpen ? [styles.navLinks, styles.navActive].join(' ') : styles.navLinks}>
-          <li>
-            <Link className={styles.link} to="/interior">Interior Design</Link>
-          </li>
-        </ul>
+          <ul className={isOpen ? [styles.navLinks, styles.navActive].join(' ') : styles.navLinks}>
+            <li>
+              <Link className={styles.link} to="/interior">Interior Design</Link>
+            </li>
+            {/* <li>
+              <Link className={styles.link} to="/featured">Featured</Link>
+            </li> */}
+          </ul>
         <div
           className={isOpen ? [styles.burger, styles.open].join(' ') : styles.burger}
           onClick={toggle}
