@@ -25,32 +25,30 @@ nav {
   justify-content: flex-end;
   background-color: white;
   z-index: 2;
-
-  li a {
+  
+  .link {
     text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
   }
-}
-
-.link {
-  display: inline-block;
-  position: relative;
-}
-
-.link::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-.link:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  
+  .link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
 .burger {
@@ -76,9 +74,10 @@ nav {
     position: absolute;
     height: 116vh;
     top: 8vh;
-    justify-content: center;
     transform: translateY(-110%);
     transition: ease-in-out 0.5s;
+    display: block;
+    text-align: center;
 
     li {
       margin-top: 5rem;
