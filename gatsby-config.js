@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-env-variables`,
+    // `gatsby-env-variables`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
@@ -21,7 +21,7 @@ module.exports = {
         projectId: 'noekh21t',
         dataset: 'production',
         watchMode: true,
-        // token: process.env.SANITY_TOKEN,
+        token: process.env.SANITY_TOKEN,
       },
     },
     {
