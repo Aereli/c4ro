@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `c4ro`,
@@ -7,6 +11,19 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-env-variables`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'noekh21t',
+        dataset: 'production',
+        watchMode: true,
+        // token: process.env.SANITY_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,9 +45,7 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-transformer-json`,
-    `gatsby-plugin-sharp`,
+
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {

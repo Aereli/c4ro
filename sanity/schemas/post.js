@@ -8,15 +8,15 @@ export default {
       title: 'Title',
       type: 'string',
     },
-    {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-    },
+    // {
+    //   name: 'slug',
+    //   title: 'Slug',
+    //   type: 'slug',
+    //   options: {
+    //     source: 'title',
+    //     maxLength: 96,
+    //   },
+    // },
     {
       name: 'author',
       title: 'Author',

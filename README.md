@@ -13,5 +13,9 @@
 - install dependencies: `yarn`
 - run local:`gatsby develop` 
 
+### Sanity
+- cd `sanity/` 
+- run `sanity install` & `sanity start` 
 
+- open graphql playground: `sanity graphql deploy` 
 
