@@ -38,7 +38,8 @@ export const query = graphql`
   
   images :
     allFile(
-      filter: { relativeDirectory: {eq: $slug } }
+      filter: { relativeDirectory: {eq: $slug } },
+      sort: { fields: [base] }
     ) {
       edges {
         node {
