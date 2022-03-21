@@ -1,56 +1,59 @@
-// import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react"
 
-// const GetFeaturedData = () => {
+export default function GetFeaturedData() {
+  // const GetFeaturedData = () =>  {
+  const [posts, setPosts] = useState()
+  const [authors, setAuthors] = useState()
+  const [category, setCategory] = useState()
 
-//     const [data, setData] = useState()
+  useEffect(() => {
+    console.log(process.env.GATSBY_SANITY_GRAPHQL)
 
-//         useEffect(() => {
-             
-//             fetch(process.env.GATSBY_SANITY_GRAPHQL, {
-    
-//                 method: 'POST',
-//                 headers: {
-//                     'Content-Type': 'application/json'
-//                 },
-//                 body: JSON.stringify({
-//                     query:
-//                     `query {
-//                         allLocations {
-//                           _id
-//                           city
-//                           description
-//                           image {
-//                             asset {
-//                               url
-//                               metadata {
-//                                 lqip
-//                               }
-//                             }
-//                           }
-//                         }
-//                       }`
-//                 })
-//             })
-//             .then(res => res.json())
-//             .then(res => setData(res.data.allLocations))
-//         },[])
-//   return (
-//            data
+    fetch(process.env.GATSBY_SANITY_GRAPHQL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `query {
+                posts: allPost{
+                 _id
+                 title
+                 bodyRaw
+                 publishedAt
+                 mainImage {
+                   asset{
+                     url
+                   }
+                 }
+               }
+                 author: allAuthor {
+                   _id
+                   bioRaw
+                   image{
+                     asset{
+                       url
+                     }
+                   }
+                 }
+                 category:allCategory {
+                   _id
+                   title
+                   description
+                 } 
+               }
+               `,
+      }),
+    })
+      .then(res => res.json())
+      .then(res => {
+        setPosts(res.data.posts)
+        setAuthors(res.data.author)
+        setCategory(res.data.category)
+      }).catch(err => console.log(err))
+  }, [])
 
-//   )
-// }
-
-// export default GetFeaturedData
-
-import React, { useState, useEffect } from 'react';
-
-const GetFeaturedData = () => {
-
-   
-  return (
-           <div>test</div>
-
-  )
+  return {posts, authors, category}
 }
 
-export default GetFeaturedData
+// export default GetFeaturedData
