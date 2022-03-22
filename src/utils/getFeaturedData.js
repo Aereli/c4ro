@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 
 export default function GetFeaturedData() {
-  // const GetFeaturedData = () =>  {
+
+  const [data, setData] = useState()
   const [posts, setPosts] = useState()
   const [authors, setAuthors] = useState()
   const [category, setCategory] = useState()
 
   useEffect(() => {
-    console.log(process.env.GATSBY_SANITY_GRAPHQL)
 
     fetch(process.env.GATSBY_SANITY_GRAPHQL, {
       method: "POST",
@@ -47,13 +47,14 @@ export default function GetFeaturedData() {
     })
       .then(res => res.json())
       .then(res => {
+        setData(res.data)
         setPosts(res.data.posts)
         setAuthors(res.data.author)
         setCategory(res.data.category)
       }).catch(err => console.log(err))
   }, [])
 
-  return {posts, authors, category}
+  return {
+    posts, authors, category, data
+  }
 }
-
-// export default GetFeaturedData

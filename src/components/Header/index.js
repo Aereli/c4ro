@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
-// import "./_header.scss"
 import styles from "./styles.module.scss"
 
 const Header = () => {
@@ -12,15 +11,15 @@ const Header = () => {
     <nav>
         <div className={styles.logo}>
           <li>
-            <Link className={styles.link} to="/">c4ro</Link>
+            <Link id={styles.link} to="/">c4ro</Link>
           </li>
         </div>
           <ul className={isOpen ? [styles.navLinks, styles.navActive].join(' ') : styles.navLinks}>
             <li>
-              <Link className={styles.link} to="/interior">Interior Design</Link>
+              <Link id={styles.link} to="/interior">Interior Design</Link>
             </li>
             {/* <li>
-              <Link className={styles.link} to="/featured">Featured</Link>
+              <Link id={styles.link} to="/featured">Featured</Link>
             </li> */}
           </ul>
         <div

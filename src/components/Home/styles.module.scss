@@ -63,7 +63,6 @@
   text-align: center;
 }
 
-
 .svg {
   -webkit-filter: drop-shadow(0 0 0.50rem #000);
   filter: drop-shadow(0 0 0.50rem #000);
@@ -78,6 +77,11 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .container {
+    height: -webkit-fill-available;
+  }
+
   .inner {
 
     .title {
