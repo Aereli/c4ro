@@ -1,0 +1,8 @@
+@import url("../../styles/primary-styles.scss");
+@import "../../styles/globals.scss";
+
+.container {
+    @extend %center-layout;
+    margin: 0 20px;
+}
+

@@ -15,8 +15,18 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sanity-image`,
     {
       resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'noekh21t',
+        dataset: 'production',
+        watchMode: true,
+        token: process.env.SANITY_TOKEN,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sanity-image',
       options: {
         projectId: 'noekh21t',
         dataset: 'production',

@@ -3,16 +3,14 @@ import GetFeaturedData from '../utils/getFeaturedData'
 
 const Featured = () => {
     
-    const {authors, posts, category} = GetFeaturedData()
     const data = GetFeaturedData()
-  console.log(authors)
-  console.log('data,',data.data)
+  console.log('data,',data)
 
   
   return (
     <>
     <h1>Featured /Blog/ Thoughts</h1>
-      {
+      {/* {
         data.data && data.data.posts.map((post, i) => 
           <div>
             <div style={{display: 'flex', float: 'right'}}>
@@ -24,7 +22,7 @@ const Featured = () => {
             <img src={post.mainImage.asset.url}/> 
           </div>
           )
-      }
+      } */}
       </>
   )
 }
