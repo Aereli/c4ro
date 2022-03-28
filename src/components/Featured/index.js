@@ -40,6 +40,7 @@ const Featured = () => {
               <img
                 src={item.image.asset.url}
                 alt={item.title}
+                title={item.title}
                 onClick={() => imageHandler(id)}
               />
             </div>
