@@ -13,7 +13,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       {/* <HomeLogo /> */}
       <HomeSymbol />
-      {/* <Featured /> */}
+      <Featured />
       <Footer />
       {/* <HomeSection data={data.allProjectsJson.nodes} /> */}
     </Layout>

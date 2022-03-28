@@ -2,7 +2,42 @@
 @import "../../styles/globals.scss";
 
 .container {
-    @extend %center-layout;
-    margin: 0 20px;
-}
+  @extend %center-layout;
+  white-space: nowrap;
 
+  h1 {
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: "montreal-book";
+    font-weight: 100;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .imagesContainer {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 30px 20px;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+    img {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+      object-fit: cover;
+      transform: scale(1);
+      transition: 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+      background: black;
+      opacity: .7;
+    }
+  }
+}
