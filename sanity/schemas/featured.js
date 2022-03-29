@@ -17,11 +17,19 @@ export default {
         },
       },
     ],
-  
+    orderings: [
+      {
+        title: 'Featured Images, New',
+        name: 'featuredImages',
+        by: [
+          {field: 'image', direction: 'desc'}
+        ]
+      },
+    ],
     preview: {
       select: {
         title: 'title',
-        media: 'mainImage',
+        media: 'image',
       },
     },
   }

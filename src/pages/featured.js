@@ -3,7 +3,6 @@ import GetFeaturedData from '../utils/getFeaturedData'
 
 const Featured = () => {
     
-    const data = GetFeaturedData()
 
   
   return (

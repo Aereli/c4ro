@@ -13,9 +13,12 @@ const Featured = () => {
 
   const [photoIndex, setPhotoIndex] = useState(1)
   const [isOpen, setIsOpen] = useState(false)
-
-  const allImages = data && data.allFeatured.map(item => item.image.asset.url)
-
+  
+  
+  // console.log('image:', allImages[0])
+  
+  const allImages = data?.allFeatured?.map(item => item.image.asset.url)
+  
   useEffect(() => {
     const scrollContainer = document.querySelector("#test")
     if (data) {
@@ -27,7 +30,7 @@ const Featured = () => {
   }, [data])
 
   function imageHandler(item) {
-    setPhotoIndex(item - 1)
+    setPhotoIndex(item)
     setIsOpen(true)
   }
 
@@ -53,6 +56,7 @@ const Featured = () => {
       )}
 
       {isOpen && (
+        <>
         <Lightbox
           mainSrc={allImages[photoIndex]}
           nextSrc={allImages[(photoIndex + 1) % allImages.length]}
@@ -63,12 +67,13 @@ const Featured = () => {
           onMovePrevRequest={() =>
             setPhotoIndex(
               (photoIndex + allImages.length - 1) % allImages.length
-            )
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % allImages.length)
-          }
-        ></Lightbox>
+              )
+            }
+            onMoveNextRequest={() =>
+              setPhotoIndex((photoIndex + 1) % allImages.length)
+            }
+            ></Lightbox>
+            </>
       )}
     </div>
   )
