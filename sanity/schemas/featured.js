@@ -24,5 +24,14 @@ export default {
         media: 'mainImage',
       },
     },
+    
+    orderings: [
+      {
+        title: 'Featured Images',
+        name: 'sortedImages',
+        by: [
+          {field: 'image', direction: 'desc'}
+        ]
+      },
+    ]
   }
-  
