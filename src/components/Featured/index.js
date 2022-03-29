@@ -27,7 +27,7 @@ const Featured = () => {
   }, [data])
 
   function imageHandler(item) {
-    setPhotoIndex(item - 1)
+    setPhotoIndex(item)
     setIsOpen(true)
   }
 
