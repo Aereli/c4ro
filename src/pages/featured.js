@@ -4,7 +4,6 @@ import GetFeaturedData from '../utils/getFeaturedData'
 const Featured = () => {
     
     const data = GetFeaturedData()
-  console.log('data,',data)
 
   
   return (

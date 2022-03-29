@@ -3,11 +3,15 @@ import GetFeaturedData from "../../utils/getFeaturedData"
 import styles from "./styles.module.scss"
 import Lightbox from "react-image-lightbox"
 import "react-image-lightbox/style.css"
+import GetTestData from "../../utils/test"
 
 const Featured = () => {
   const data = GetFeaturedData()
+  const test = GetTestData()
 
-  const [photoIndex, setPhotoIndex] = useState(0)
+  console.log('TEST',test)
+
+  const [photoIndex, setPhotoIndex] = useState(1)
   const [isOpen, setIsOpen] = useState(false)
 
   const allImages = data && data.allFeatured.map(item => item.image.asset.url)
