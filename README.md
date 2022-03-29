@@ -19,6 +19,3 @@
 - run `sanity install` & `sanity start` 
 
 - open graphql playground: `sanity graphql deploy` 
-
-prod: sk6YlNhXa5eX3Uz7xTMYivmlI3IZTDE46n7jYtnFeWUdvglGSpCD4Q3USDUv4fvT8tYnZwr1ZI8Z4nmqJ7Tkfj1OWVYhtiw2SdMPAMD4zuuNeICrOgI0tYz42eo3horFtk4XvXh2EMJL4AimzkAlR2uXTeyiv6EkLKGT39iElUWBO4UbEcTB
-
